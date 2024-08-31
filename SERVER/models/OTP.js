@@ -33,7 +33,7 @@ throw error;
 
 OTPSchema.pre("save",async function(next){
    await sendVerificationEmail(this.email,this.otp);
-   next();
+   next();  
 })
 
 module.exports=mongoose.model("OTP",OTPSchema)
